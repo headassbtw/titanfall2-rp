@@ -438,6 +438,12 @@
       <Address>engine.dll+111D3AB4</Address>
     </CheatEntry>
     <CheatEntry>
+      <ID>84</ID>
+      <Description>"Currently equipped titan (engine.dll+7A7429)"</Description>
+      <VariableType>Byte</VariableType>
+      <Address>engine.dll+7A7429</Address>
+    </CheatEntry>
+    <CheatEntry>
       <ID>87</ID>
       <Description>"Current faction (engine.dll+7A7383)"</Description>
       <VariableType>Byte</VariableType>
