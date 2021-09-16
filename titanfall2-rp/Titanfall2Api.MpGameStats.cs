@@ -1,4 +1,5 @@
 ﻿using System;
+using System;
 using titanfall2_rp.enums;
 
 namespace titanfall2_rp
@@ -459,7 +460,6 @@ namespace titanfall2_rp
             {
                 return _frontierDefense;
             }
-            
 
             /// <summary>
             /// Determine whether the user is searching for match or just sitting in a lobby.
@@ -901,11 +901,11 @@ namespace titanfall2_rp
             /// engine.dll+130D9AFE
             /// engine.dll+130D9B00
             /// </summary>
-            /// <returns></returns>
+            /// <returns>whether the user is actively searching for a match</returns>
             public bool IsSearchingForMatch()
             {
                 // TODO: There are duplicates in the pointers list above (somehow)
-                return _tf2Api._sharp!.Memory.Read(_tf2Api._clientDllBaseAddress + 0xB221E1, 1)[0]==1;
+                return _tf2Api._sharp!.Memory.Read(_tf2Api._clientDllBaseAddress + 0xB221E1, 1)[0] == 1;
             }
 
             public Faction GetCurrentFaction()
