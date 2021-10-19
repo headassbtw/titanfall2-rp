@@ -15,15 +15,34 @@ namespace CrossPlatUI
         public static Command QuitCommand;
         public static Command ShowCommand;
         public static RichPresenceManager Manager;
+        // ReSharper disable once InconsistentNaming //SHUT THE FUCK UP RIDER
         public static Thread RPCThread;
         static void Main(string[] args)
         {
             App = new Application();
+            App.Name = Resources.AppDisplayName;
             Icon = Eto.Drawing.Icon.FromResource("CrossPlatUI.tf2rp.png");
             MainWindow = new MainWindow();
             TrayIcon = new TrayIcon(MainWindow);
             Manager = new();
-            RPCThread = new Thread(async => Manager.Begin());
+            RPCThread = new Thread(async =>
+            {
+                try
+                {
+                    Manager.Begin();
+                }
+                catch (Exception exc)
+                {
+                    
+                    var notif = new Notification();
+                    notif.Title = exc.GetType().ToString();
+                    notif.ContentImage = Icon;
+                    notif.Message = exc.Message;
+                    notif.Show();
+                    App.Quit();
+                    return;
+                }
+            });
             RPCThread.Start();
             App.Run();
             QuitCommand = new Command();
