@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <AssemblyName>CrossPlatUI</AssemblyName>
+        <RootNamespace>CrossPlatUI</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Eto.Forms" Version="2.5.11" />
+      <PackageReference Include="Eto.Platform.Gtk" Version="2.5.11" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\titanfall2-rp\titanfall2-rp.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="tf2rp.ico" />
+      <EmbeddedResource Include="tf2rp.ico" />
+      <None Remove="tf2rp.png" />
+      <EmbeddedResource Include="tf2rp.png" />
+      <EmbeddedResource Update="Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

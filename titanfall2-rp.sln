@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniversalMem", "UniversalMe
 		{E9CB13B8-347D-426D-8535-1B1D6228AC81} = {E9CB13B8-347D-426D-8535-1B1D6228AC81}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossPlatUI", "CrossPlatUI\CrossPlatUI.csproj", "{752D402E-2FBE-447C-8C01-6ADD391A3000}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{01DA5A62-687D-4343-847D-F1906B6E497A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01DA5A62-687D-4343-847D-F1906B6E497A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01DA5A62-687D-4343-847D-F1906B6E497A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{752D402E-2FBE-447C-8C01-6ADD391A3000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{752D402E-2FBE-447C-8C01-6ADD391A3000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{752D402E-2FBE-447C-8C01-6ADD391A3000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{752D402E-2FBE-447C-8C01-6ADD391A3000}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
